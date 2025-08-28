@@ -6,7 +6,7 @@ $sql_colab = "SELECT
             , CONCAT(NOMBRES,' ',APELLIDO_PATERNO) NOMBRE
             , FECHA_INGRESO
             , DATE_FORMAT(FECHA_INGRESO, '%d/%m/%Y') FECHA_INGRESO2
-            , Puesto
+            , p.descrip_puesto Puesto
             , Anio_Ini
             , YEAR(FECHA_INGRESO) Anio_Ini_Val
             , YEAR(NOW()) ANIO_ACTUAL
@@ -18,7 +18,9 @@ $sql_colab = "SELECT
             , IFNULL((SELECT SUM(sv.dias_sol) FROM sol_vacaciones sv where sv.id_empleado = c.ID_Empleado AND sv.estatus != 2 ),0) Dias_Soli
             , IFNULL((SELECT SUM(sv.dias_sol) FROM sol_vacaciones sv where sv.id_empleado = c.ID_Empleado AND sv.estatus = 0 ),0) Dias_Por_Aprob
             , IFNULL((SELECT SUM(sv.dias_sol) FROM sol_vacaciones sv where sv.id_empleado = c.ID_Empleado AND sv.estatus = 1 ),0) Dias_aprob
-            FROM colaborador c WHERE 
+            FROM colaborador c 
+            INNER JOIN puesto p on c.Puesto =  p.id_puesto
+            WHERE 
             Puesto !=  'Supervisor' AND Estatus = 0 order by FECHA_INGRESO;";
 
 $res_colab = $mysqli->query($sql_colab);

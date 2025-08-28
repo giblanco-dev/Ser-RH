@@ -40,7 +40,7 @@ require_once '../../logic/conn.php';
         $fecha_fin = $row_solicitud['fecha_fin'];
         $puesto = $row_solicitud['Puesto'];
 
-        if($puesto == 'Caja' or $nivel == 'Recepción'){
+        if($puesto == 3 or $nivel == 5){
             $empleado = $row_solicitud['id_empleado'].',';
             $sql_upd_calendar = "UPDATE calendario SET id_colaboradorB = REPLACE(id_colaboradorB, '$empleado', '') where Fecha BETWEEN '$fecha_ini' AND '$fecha_fin';";
         }else{
@@ -84,11 +84,7 @@ require_once '../../logic/conn.php';
                 $icon = "error";
     }
 
-    if($or == 1){
-        $url = "../";
-    }elseif($or == 2){
-        $url = "../detalle_colab.php?i=".$id_empleado;
-    }
+  
 
 ?>
 
@@ -115,7 +111,7 @@ require_once '../../logic/conn.php';
                     icon: "'.$icon.'",
                     button: "Regresar",
                 }).then(function() {
-                    window.location = "'.$url.'";
+                    window.location = "../detalle_vaccolab.php?i='.$id_empleado.'";
                 });
                 </script>';
     

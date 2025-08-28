@@ -1,6 +1,12 @@
 <?php
 $periodo_vacacional = "2025";
-$sql_datos_colab = "SELECT CONCAT(NOMBRES,' ',APELLIDO_PATERNO) NOMBRE, Puesto, User, pass FROM colaborador WHERE ID_Empleado = $colaborador AND estatus = 0";
+$sql_datos_colab = "SELECT CONCAT(NOMBRES,' ',APELLIDO_PATERNO) NOMBRE
+                    , p.descrip_puesto Puesto
+                    , User
+                    , pass 
+                    FROM colaborador c
+                    INNER JOIN puesto p on c.Puesto =  p.id_puesto
+                    WHERE ID_Empleado = $colaborador AND estatus = 0";
 $res_datos_colab = $mysqli->query($sql_datos_colab);
 $val_datos_colab = $res_datos_colab->num_rows;
 

@@ -5,14 +5,16 @@ $sql_days = "SELECT
             ID_Empleado
             , NOMBRE_COMPLETO
             , FECHA_INGRESO
-            , Puesto
+            , p.descrip_puesto Puesto
             , Anio_Ini
             , YEAR(FECHA_INGRESO) Anio_Ini_Val
             , YEAR(NOW()) ANIO_ACTUAL
             , (YEAR(NOW()) - YEAR(FECHA_INGRESO)) DIF_ANIOS
             , (SELECT dias FROM tabulador_dias WHERE ((YEAR(NOW()) - YEAR(FECHA_INGRESO)) >= MIN AND (YEAR(NOW()) - YEAR(FECHA_INGRESO)) < MAX)) DIAS_ASIGN
             , (SELECT dias_letra FROM tabulador_dias WHERE ((YEAR(NOW()) - YEAR(FECHA_INGRESO)) >= MIN AND (YEAR(NOW()) - YEAR(FECHA_INGRESO)) < MAX)) DIAS_ASIGN_LETRA
-            FROM colaborador c WHERE 
+            FROM colaborador c
+            INNER JOIN puesto p on c.Puesto =  p.id_puesto
+            WHERE 
             Puesto !=  'Supervisor' AND Estatus = 0 AND ID_Empleado = $colaborador;";
 
 $res_days = $mysqli->query($sql_days);

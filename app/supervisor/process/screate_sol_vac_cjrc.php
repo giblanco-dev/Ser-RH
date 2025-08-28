@@ -140,7 +140,7 @@ if($sol_pend > 0 and $per_vac > 1){
 </head>
 <body style="background-image: url('../../../static/img/background_login.png'); background-size: cover;">
 
-<?php  // Cierre despliegue de días ocupados 
+<?php  
    
 
         echo '<script type="text/javascript">
@@ -150,7 +150,7 @@ if($sol_pend > 0 and $per_vac > 1){
                     icon: "'.$icon.'",
                     button: "Regresar",
                 }).then(function() {
-                    window.location = "../";
+                    window.location = "../detalle_vaccolab.php?i='.$id_colab.'";
                 });
                 </script>';
     

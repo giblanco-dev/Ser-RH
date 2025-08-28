@@ -115,7 +115,7 @@ if($flag_dias_ocupados == 1){
             <h5>Los siguientes días seleccionados ya se encuentran solicitados por tus compañer@s</h5>
             <div class="divider"></div>
             <br>
-                <a href="../detalle_colab.php?i=<?php echo $id_colab; ?>" class="waves-effect waves-light btn"><i class="material-icons right">keyboard_backspace</i>Regresar</a>
+                <a href="../detalle_vaccolab.php?i=<?php echo $id_colab; ?>" class="waves-effect waves-light btn"><i class="material-icons right">keyboard_backspace</i>Regresar</a>
             <br>
                 
             <table>
@@ -150,7 +150,7 @@ if($flag_dias_ocupados == 1){
                     icon: "'.$icon.'",
                     button: "Regresar",
                 }).then(function() {
-                    window.location = "../detalle_colab.php?i='.$id_colab.'";
+                    window.location = "../detalle_vaccolab.php?i='.$id_colab.'";
                 });
                 </script>';
     
