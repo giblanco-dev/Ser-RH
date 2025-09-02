@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['id'])) {
     header('Location: ../index.php');
     exit();
-}elseif($_SESSION['nivel'] == 'Supervisor'){
+}elseif($_SESSION['nivel'] == 7){
             $id_user = $_SESSION['id'];
             $usuario = $_SESSION['name_usuario'];
             $nivel = $_SESSION['nivel'];
@@ -83,7 +83,7 @@ require_once 'process/sol_vac.php';
                 <i class="medium material-icons">check_circle</i>
                 </div>
                 <div class="card-action">
-                <a href="../recep/" class="grey-text text-lighten-2">Gestionar Asistencias</a>
+                <a href="asistencia.php" class="grey-text text-lighten-2">Gestionar Asistencias</a>
                 </div>
                 </div>
             </div>

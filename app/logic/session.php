@@ -17,7 +17,7 @@ if(!empty($_POST))
             $_SESSION['id'] = $row['ID_Empleado'];
             $_SESSION['name_usuario'] = $row['NOMBRE_COMPLETO'];
             $_SESSION['nivel'] = $row['Puesto'];
-            if($row['Puesto'] == 'Supervisor'){
+            if($row['Puesto'] == 7){
               header('Location: ../supervisor');
             }else{
               header('Location: ../colaborador');

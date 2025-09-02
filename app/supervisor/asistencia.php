@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['id'])) {
     header('Location: ../index.php');
     exit();
-}elseif($_SESSION['nivel'] == 'Supervisor'){
+}elseif($_SESSION['nivel'] == 7){
             $id_user = $_SESSION['id'];
             $usuario = $_SESSION['name_usuario'];
             $nivel = $_SESSION['nivel'];
@@ -77,7 +77,7 @@ require_once '../logic/conn.php';
 
             <div class="col s6">
                 <blockquote>Generar reporte de asistencias</blockquote>
-              <form action="reporte_asis.php" method="post">
+              <form action="process/reporte_asis.php" method="post">
                   <div class="row">
                         <div class="input-field col s12">
                         <input type="date" placeholder="Seleccione la fecha" name="fecha_ini" id = "fechaini" min="<?php echo $ini_cal ?>" max="<?php echo $fin_cal ?>" required>
