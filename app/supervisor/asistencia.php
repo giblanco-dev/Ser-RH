@@ -47,6 +47,7 @@ require_once '../logic/conn.php';
     <div class="nav-wrapper">
       <a href="#" class="responsive-img" class="brand-logo"><img src="../../static/img/logo.png" style="max-height: 80px; margin-left: 20px;"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.php"><i class="material-icons right">home</i>Inicio</a></li>
       <li><a href="../logic/logout.php"><i class="material-icons right">close</i>Cerrar Sistema</a></li>
       </ul>
     </div>
@@ -57,11 +58,11 @@ require_once '../logic/conn.php';
 <div class="row">
     <div class="col s4">    </div>
     <div class="col s8">
-        <h4 style="color: #2d83a0; font-weight:bold;">Ser Recursos Humanos</h4>
+        <h4 style="color: #2d83a0; font-weight:bold;">Asistencia Colaboradores</h4>
     </div>
 </div>
 <div class="row">
-  <div class="col s4">
+  <div class="col s3">
 
         <ul class="collection with-header">
         <li class="collection-header"><h4>Configuraciones</h4></li>
@@ -71,12 +72,12 @@ require_once '../logic/conn.php';
 
 
   </div>
-
-  <div class="col s8">
+  <div class="col s2"></div>      
+  <div class="col s7">
         <div class="row">
 
             <div class="col s6">
-                <blockquote>Generar reporte de asistencias</blockquote>
+                <blockquote><b>Generar reporte de asistencias</b></blockquote>
               <form action="process/reporte_asis.php" method="post">
                   <div class="row">
                         <div class="input-field col s12">

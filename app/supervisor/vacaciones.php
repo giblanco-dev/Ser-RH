@@ -49,8 +49,7 @@ require_once 'process/resum_colab.php';
       <a href="#" class="responsive-img" class="brand-logo"><img src="../../static/img/logo.png" style="max-height: 80px; margin-left: 20px;"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="index.php"><i class="material-icons right">home</i>Inicio</a></li>
-      <li><a href="calendario_vac.php"><i class="material-icons right">perm_contact_calendar</i>Calendario Vacaciones</a></li>
-      <li><a href="#"><i class="material-icons right">person</i>Colaboradores</a></li>  
+      <li><a href="calendario_vac.php"><i class="material-icons right">perm_contact_calendar</i>Calendario Vacaciones</a></li>  
       <li><a href="../logic/logout.php"><i class="material-icons right">close</i>Cerrar Sistema</a></li>
       </ul>
     </div>
