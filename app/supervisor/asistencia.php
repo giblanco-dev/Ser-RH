@@ -62,18 +62,10 @@ require_once '../logic/conn.php';
     </div>
 </div>
 <div class="row">
-  <div class="col s3">
-
-        <ul class="collection with-header">
-        <li class="collection-header"><h4>Configuraciones</h4></li>
-        <li class="collection-item"><div style="font-size: 18px;">Colaboradores<a href="users.php" class="secondary-content"><i class="material-icons">person</i></a></div></li>
-        <li class="collection-item"><div style="font-size: 18px;">Alta Colaborador<a href="users.php" class="secondary-content"><i class="material-icons">person_add</i></a></div></li>
-      </ul>
-
-
+  <div class="col s4">
   </div>
-  <div class="col s2"></div>      
-  <div class="col s7">
+        
+  <div class="col s8">
         <div class="row">
 
             <div class="col s6">
@@ -88,9 +80,9 @@ require_once '../logic/conn.php';
                       <input type="date" placeholder="Seleccione la fecha" name="fecha_fin" id = "fechafin" min="<?php echo $ini_cal ?>" max="<?php echo $fin_cal ?>" required>
                         <label for="fechafin">Fecha Final</label>
                       </div>
-                      <div class="input-field col s12">
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
-                          <i class="material-icons right">send</i>
+                      <div class="input-field col s12 center-align">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Descargar Asistencias
+                          <i class="material-icons right">file_download</i>
                         </button>
                       </div>
                 </div>

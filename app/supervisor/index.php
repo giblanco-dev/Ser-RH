@@ -66,8 +66,8 @@ require_once 'process/sol_vac.php';
 
         <ul class="collection with-header">
         <li class="collection-header"><h4>Configuraciones</h4></li>
-        <li class="collection-item"><div style="font-size: 18px;">Colaboradores<a href="users.php" class="secondary-content"><i class="material-icons">person</i></a></div></li>
-        <li class="collection-item"><div style="font-size: 18px;">Alta Colaborador<a href="users.php" class="secondary-content"><i class="material-icons">person_add</i></a></div></li>
+        <li class="collection-item"><div style="font-size: 18px;">Colaboradores<a href="colaboradores.php" class="secondary-content"><i class="material-icons">person</i></a></div></li>
+        <li class="collection-item"><div style="font-size: 18px;">Alta Colaborador<a href="process_colab.php?ie=999&e=999&flagmod=ncol" class="secondary-content"><i class="material-icons">person_add</i></a></div></li>
       </ul>
 
 
