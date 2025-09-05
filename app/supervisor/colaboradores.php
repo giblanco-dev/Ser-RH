@@ -125,7 +125,7 @@ $res_colab = $mysqli->query($sql_colab_all);
                         <td class=\"center-align\">{$row_colab['descrip_puesto']}</td>
                         <td class=\"center-align\">{$row_colab['Des_estatus']}</td>
                         <td class=\"center-align\"><a href=\"process_colab.php?ie={$ID_Empleado}&e={$estatus}&flagmod=modstatus\" class=\"waves-effect waves-light btn-small {$color_button}\">{$row_colab['Action_estatus']}</a></td>
-                        <td class=\"center-align\"><a href=\"process_colab.php?ie={$ID_Empleado}&e=999&flagmod=ucol\" class=\"green darken-3 btn-small cyan darken-4\" target=\"_blank\">Actualizar</a></td>
+                        <td class=\"center-align\"><a href=\"process_colab.php?ie={$ID_Empleado}&e=999&flagmod=ucol\" class=\"green darken-3 btn-small cyan darken-4\">Actualizar</a></td>
                       </tr>";
                 }
               

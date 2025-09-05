@@ -81,10 +81,8 @@ if($flag_mod == 'ncol'){
                     APELLIDO_MATERNO = '$apellido_m',
                     FECHA_INGRESO = '$fecha_ingreso',
                     Puesto = '$puesto',
-                    User = 'Pendiente',
                     ini_pass = 'ABC',
                     Anio_Ini = YEAR('$fecha_ingreso'),
-                    pass = '12345',
                     estatus = '$estatus'
                     WHERE ID_Empleado = '$ID_Empleado';";
 
@@ -108,7 +106,7 @@ if($flag_mod == 'ncol'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envío de Solicitud de Vacaciones</title>
+    <title>Guardando Información Colaborador</title>
     <link rel="shortcut icon" href="../../../static/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../static/css/materialize.css">
     <script type="text/javascript" src="../../../static/js/jquery-3.3.1.min.js"></script>
